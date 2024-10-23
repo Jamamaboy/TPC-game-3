@@ -19,9 +19,9 @@
 	import PP from './nested-components/pP.svelte';
 	import { error } from '@sveltejs/kit';
 
-	const images: { [key: string]: { default: string } } = import.meta.glob('../public/Img/*.png', { eager: true });
+	const images: { [key: string]: { default: string } } = import.meta.glob('../public/Img/*.webp', { eager: true });
 	const imageUrls: { [key: string]: string } = Object.keys(images).reduce((acc: { [key: string]: string }, path) => {
-		const fileName = path.split('/').pop()?.replace('.png', '');
+		const fileName = path.split('/').pop()?.replace('.webp', '');
 		if (fileName) {
 			acc[fileName] = images[path].default;
 		}
@@ -130,6 +130,7 @@
 </body>
 
 <style>
+
 	@font-face {
 		font-family: 'CloudLoop';
 		src: url('./font/CloudLoop-Regular.otf') format('opentype');
@@ -141,17 +142,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 100vh;
+		min-height: 100dvh;
 		margin: 0;
 	}
-
 	img {
 		position: absolute;
 		z-index: 0;
-		max-width: 100vw;
-		max-height: 100vh;
+		max-width: 100dvw;
+		max-height: 100dvh;
 		width: auto;
 		height: auto;
 		object-fit: contain;
 	}
+
 </style>
