@@ -114,8 +114,8 @@
 		<div class="as">
 			<button on:click={() => handleClick(0, 1)}>ขึ้นไปนั่งด้วยความรู้สึกอยากพักเหนื่อยเต็มทน</button>
 			<button on:click={() => handleClick(0, 1)}>สอบถามเส้นทางกับคนขับก่อนจะขึ้นไปนั่ง</button>
-			<button on:click={() => handleClick(0, 2)}>คุณตัดสินใจไม่ขึ้นเพราะบนรถ<br>ไม่มีผู้โดยสารคนอื่น</button>
-			<button on:click={() => handleClick(0, 2)}>ถึงแม้งว่าจะเหนื่อย<br>แต่คุณก็ยืนหยัดที่จะเดินต่อไป</button>
+			<button on:click={() => handleClick(0, 2)}>คุณตัดสินใจไม่ขึ้นเพราะบนรถไม่มีผู้โดยสารคนอื่น</button>
+			<button on:click={() => handleClick(0, 2)}>ถึงแม้งว่าจะเหนื่อยแต่คุณก็ยืนหยัดที่จะเดินต่อไป</button>
 		</div>
 	{/if}
 
@@ -149,8 +149,8 @@
 		/* background-color: aqua;	 */
 	}
 	.as button {
-		font-family: 'CloudLoop', sans-serif;
-		font-size: 18px;
+		font-family: 'CloudLoop';
+		font-size: 16px;
 		color: darkslategrey;
 		height: 100%;
 		width: 100%;

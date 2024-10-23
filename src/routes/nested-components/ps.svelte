@@ -56,7 +56,7 @@
 	}
 	.as button {
 		font-family: 'CloudLoop', sans-serif;
-		font-size: 16px;
+		font-size: 14px;
 		color: darkslategrey;
 		height: 100%;
 		width: 100%;

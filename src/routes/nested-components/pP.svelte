@@ -54,7 +54,7 @@
 		border: 5em;
 		cursor: pointer;
 		outline: none;
-		font-size: 13px;
+		font-size: 14px;
 		-webkit-transform: translate(0);
 		transform: translate(0);
 		background-image: linear-gradient(45deg, #4568dc, #b06ab3);

@@ -22,10 +22,10 @@
 
 	{#if page == 6}
 		<div class="as">
-			<button on:click={() => handleClick(0, 1)}>ไม่มีอะไรหรอก คงเป็นแค่เสียงลม<br>ที่กระทบกับหน้าต่าง</button>
-			<button on:click={() => handleClick(0, 1)}>ใจเริ่มสั่น ตัวคุณเองก็กลัว และเริ่ม<br>จินตนาการไปต่าง ๆ นา ๆ</button>
+			<button on:click={() => handleClick(0, 1)}>ไม่มีอะไรหรอก คงเป็นแค่เสียงลมที่กระทบกับหน้าต่าง</button>
+			<button on:click={() => handleClick(0, 1)}>ใจเริ่มสั่น ตัวคุณเองก็กลัว และเริ่มจินตนาการไปต่าง ๆ นา ๆ</button>
 			<button on:click={() => handleClick(0, 2)}>คุณจะลุกขึ้นมาเปิดไฟ</button>
-			<button on:click={() => handleClick(0, 2)}>เรามันแน่อยู่แล้ว ขอก้มลงไปดูใต้<br>เตียงเลยแล้วกัน !</button>
+			<button on:click={() => handleClick(0, 2)}>เรามันแน่อยู่แล้ว ขอก้มลงไปดูใต้เตียงเลยแล้วกัน !</button>
 		</div>
 	{/if}
 	{#if page == 12}
@@ -67,7 +67,7 @@
 	}
 	.as button {
 		font-family: 'CloudLoop';
-		font-size: 16px;
+		font-size: 14px;
 		color: darkslategrey;
 		height: 100%;
 		width: 100%;
