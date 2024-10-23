@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { inject } from '@vercel/analytics'
 	let page = 1;
 	let point = [0];
 	let contentHeight = 0;
@@ -116,7 +117,7 @@
 	<!-- NextP [39] -->
 	{#if page_nextP.includes(page)}
 		<img src={getImageSrc(page)} alt="P{page}" on:load={handleImageLoad}>
-		<PP contentHeight={contentHeight} contentWidth={contentWidth} points={point} on:nextPage={handleNextPage} />
+		<PP contentHeight={contentHeight} contentWidth={contentWidth} on:nextPage={handleNextPage} />
 	{/if}
 
 	<!-- ENG [40] -->
