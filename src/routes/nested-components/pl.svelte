@@ -76,7 +76,7 @@
 
 	{#if page == 29}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>การ์ตูนแอ๊กชันที่สนุกสุดเหวี่ยง</button>
+			<button on:click={() => handleClick(1, 1)}>การ์ตูนแอ็กชันที่สนุกสุดเหวี่ยง</button>
 			<button on:click={() => handleClick(2, 1)}>หนังที่เข้าถึงจิตใจคน</button>
 			<button on:click={() => handleClick(3, 1)}>สารคดี</button>
 			<button on:click={() => handleClick(4, 1)}>หนังเสียดสีสังคม</button>
@@ -115,7 +115,7 @@
 			<button on:click={() => handleClick(0, 1)}>ขึ้นไปนั่งด้วยความรู้สึกอยากพักเหนื่อยเต็มทน</button>
 			<button on:click={() => handleClick(0, 1)}>สอบถามเส้นทางกับคนขับก่อนจะขึ้นไปนั่ง</button>
 			<button on:click={() => handleClick(0, 2)}>คุณตัดสินใจไม่ขึ้นเพราะบนรถไม่มีผู้โดยสารคนอื่น</button>
-			<button on:click={() => handleClick(0, 2)}>ถึงแม้งว่าจะเหนื่อยแต่คุณก็ยืนหยัดที่จะเดินต่อไป</button>
+			<button on:click={() => handleClick(0, 2)}>ถึงแม้ว่าจะเหนื่อยแต่คุณก็ยืนหยัดที่จะเดินต่อไป</button>
 		</div>
 	{/if}
 
@@ -141,7 +141,7 @@
 	}
 	.as {
 		height: 100%;
-		width: 60%;
+		width: 70%;
 		display: grid;
 		align-items: center;
 		grid-template-rows: 1fr 1fr 1fr 1fr;

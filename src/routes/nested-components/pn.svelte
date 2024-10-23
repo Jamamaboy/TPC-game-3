@@ -23,7 +23,7 @@
 	{#if page == 6}
 		<div class="as">
 			<button on:click={() => handleClick(0, 1)}>ไม่มีอะไรหรอก คงเป็นแค่เสียงลมที่กระทบกับหน้าต่าง</button>
-			<button on:click={() => handleClick(0, 1)}>ใจเริ่มสั่น ตัวคุณเองก็กลัว และเริ่มจินตนาการไปต่าง ๆ นา ๆ</button>
+			<button on:click={() => handleClick(0, 1)}>ใจเริ่มสั่น ตัวคุณเองก็กลัว และเริ่มจินตนาการไปต่าง ๆ นานา</button>
 			<button on:click={() => handleClick(0, 2)}>คุณจะลุกขึ้นมาเปิดไฟ</button>
 			<button on:click={() => handleClick(0, 2)}>เรามันแน่อยู่แล้ว ขอก้มลงไปดูใต้เตียงเลยแล้วกัน !</button>
 		</div>
@@ -32,7 +32,7 @@
 		<div class="as">
 			<button on:click={() => handleClick(0, 1)}>คุณมึนงงปนตกใจ พร้อมรีบก้าวลงจากรถเข้าไปอุ้มแมวตัวนั้น</button>
 			<button on:click={() => handleClick(0, 1)}>คุณตื่นเต้น พร้อมลุกจากรถไปอุ้มเจ้าเหมียวเดินทางไปด้วยกัน</button>
-			<button on:click={() => handleClick(0, 2)}>คุณฉะชะโงกหน้าออกไปดูลาดเลา เจ้าแมว เพื่อที่จะได้พิจารณามัน</button>
+			<button on:click={() => handleClick(0, 2)}>คุณชะโงกหน้าออกไปดูลาดเลา เจ้าแมว เพื่อที่จะได้พิจารณามัน</button>
 			<button on:click={() => handleClick(0, 2)}>คุณคิดว่ามันแปลกเกินไปที่แมวจะอยู่ที่นี่ และคงไม่ดีนักที่จะไปยุ่งกับมัน</button>
 		</div>
 	{/if}

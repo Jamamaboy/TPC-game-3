@@ -46,7 +46,7 @@
 		z-index: 1;
 		justify-items: center;
 		align-items: center;
-		grid-template-rows: 65% 45% 10%;
+		grid-template-rows: 69% 39% 10%;
 		width: 100%;
 	}
 	button {
