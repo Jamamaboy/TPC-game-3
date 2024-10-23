@@ -1,4 +1,17 @@
 <script lang="ts">
+
+	import BAS from '../../public/Img/GO/BAS.png';
+	import CITU from '../../public/Img/GO/CITU.png';
+	import LLB from '../../public/Img/GO/LLB.png';
+	import BIR from '../../public/Img/GO/BIR.png';
+	import PBIC from '../../public/Img/GO/PBIC.png';
+	import SPD from '../../public/Img/GO/SPD.png';
+	import TBS from '../../public/Img/GO/TBS.png';
+	import BJM from '../../public/Img/GO/BJM.png';
+	import BE from '../../public/Img/GO/BE.png';
+	import PPE from '../../public/Img/GO/PPE.png';
+
+
 	import { onMount } from "svelte";
 	import { createEventDispatcher } from "svelte";
 
@@ -16,25 +29,25 @@
 	}
 	function determineGift() {
 		if (totalPoints >= 10 && totalPoints <= 13) {
-			gift = "BAS";
+			gift = BAS;
 		} else if (totalPoints >= 14 && totalPoints <= 16) {
-			gift = "CITU";
+			gift = CITU;
 		} else if (totalPoints >= 17 && totalPoints <= 19) {
-			gift = "LLB";
+			gift = LLB;
 		} else if (totalPoints >= 20 && totalPoints <= 22) {
-			gift = "BIR";
+			gift = BIR;
 		} else if (totalPoints >= 23 && totalPoints <= 25) {
-			gift = "PBIC";
+			gift = PBIC;
 		} else if (totalPoints >= 26 && totalPoints <= 28) {
-			gift = "SPD";
+			gift = SPD;
 		} else if (totalPoints >= 29 && totalPoints <= 31) {
-			gift = "TBS";
+			gift = TBS;
 		} else if (totalPoints >= 32 && totalPoints <= 34) {
-			gift = "BJM";
+			gift = BJM;
 		} else if (totalPoints >= 35 && totalPoints <= 37) {
-			gift = "BE";
+			gift = BE;
 		} else if (totalPoints >= 38 && totalPoints <= 40) {
-			gift = "PPE";
+			gift = PPE;
 		}
 	}
 
@@ -58,7 +71,7 @@
 
 <div class="container">
 
-	<img src={`./src/public/Img/GO/${gift}.png`} alt="{gift}" />
+	<img src={gift} alt="{gift}" />
 
 	<div class="controls">
 		<button on:click={reset}>ReStart Game</button>
