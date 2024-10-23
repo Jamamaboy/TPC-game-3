@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
-	import { supabase } from '../../lib/supabase.js';
 
 	export let contentHeight: number;
 	export let contentWidth: number;
@@ -19,15 +18,26 @@
 	showButtonAfterDelay();
 
 	async function saveData(points: number[]) {
-		const { data, error } = await supabase
-			.from('points_pages')
-			.insert([
-				{ points: points },
-			]);
-		if (error) {
-			console.error('Error inserting data:', error.message);
-		} else {
-			// console.log('Data inserted:', data);
+		try {
+			const url = new URL('https://script.google.com/macros/s/AKfycbw48X8xE6V1V61y_Dr88jst6TA66AjDtK341LtCoEptVgVYICqefSscNpPMWzWBB4ls/exec');
+			url.searchParams.append('points', JSON.stringify(points));
+
+			const response = await fetch(url.toString(), {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				console.log('Data sent successfully:', data);
+			} else {
+				console.error('Error from server:', data.error);
+			}
+		} catch (error) {
+			console.error('Fetch error:', error);
 		}
 	}
 
