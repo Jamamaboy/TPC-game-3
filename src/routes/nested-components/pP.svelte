@@ -58,7 +58,7 @@
 		-webkit-transform: translate(0);
 		transform: translate(0);
 		background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-		padding: 0.7em 1em;
+		padding: 0.3em 1em;
 		box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
 		-webkit-transition: box-shadow 0.25s;
 		transition: box-shadow 0.25s;
