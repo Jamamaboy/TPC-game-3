@@ -57,7 +57,7 @@
 
 	function downloadImage(gift: string) {
 		const link = document.createElement('a');
-		link.href = `./src/public/Img/GO/${gift}.png`;
+		link.href = gift;
 		link.download = `gift.png`;
 		document.body.appendChild(link);
 		link.click();
