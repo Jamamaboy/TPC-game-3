@@ -1,15 +1,15 @@
 <script lang="ts">
 
-	import BAS from '../../public/Img/GO/BAS.webp';
-	import CITU from '../../public/Img/GO/CITU.webp';
-	import LLB from '../../public/Img/GO/LLB.webp';
-	import BIR from '../../public/Img/GO/BIR.webp';
-	import PBIC from '../../public/Img/GO/PBIC.webp';
-	import SPD from '../../public/Img/GO/SPD.webp';
-	import TBS from '../../public/Img/GO/TBS.webp';
-	import BJM from '../../public/Img/GO/BJM.webp';
-	import BE from '../../public/Img/GO/BE.webp';
-	import PPE from '../../public/Img/GO/PPE.webp';
+	import BAS from '../../public/Img/GO/BAS.png';
+	import CITU from '../../public/Img/GO/CITU.png';
+	import LLB from '../../public/Img/GO/LLB.png';
+	import BIR from '../../public/Img/GO/BIR.png';
+	import PBIC from '../../public/Img/GO/PBIC.png';
+	import SPD from '../../public/Img/GO/SPD.png';
+	import TBS from '../../public/Img/GO/TBS.png';
+	import BJM from '../../public/Img/GO/BJM.png';
+	import BE from '../../public/Img/GO/BE.png';
+	import PPE from '../../public/Img/GO/PPE.png';
 
 
 	import { onMount } from "svelte";
@@ -58,7 +58,7 @@
 	function downloadImage(gift: string) {
 		const link = document.createElement('a');
 		link.href = gift;
-		link.download = `gift.webp`;
+		link.download = `gift.png`;
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);

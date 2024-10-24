@@ -3,13 +3,14 @@
 	import { inject } from '@vercel/analytics';
 
 	inject({ mode: dev ? 'development' : 'production' });
-	let page = 1;
+	let page = 0;
 	let point = [0];
 	let contentHeight = 0;
 	let contentWidth = 0;
 
 	let history = [1];
 
+	import Pzero from './nested-components/pzero.svelte';
 	import PStart from './nested-components/pStart.svelte';
 	import Ptbc from './nested-components/ptbc.svelte';
 	import Pn from './nested-components/pn.svelte';
@@ -28,6 +29,7 @@
 		return acc;
 	}, {});
 
+	const page_zero = [0];
 	const page_Start = [1];
 	const page_tbc = [2, 3, 7, 8, 13, 14, 16, 17, 18, 20, 22, 24, 26, 31, 34, 36, 37, 38];
 	const page_nextX2 = [4, 5];
@@ -53,6 +55,9 @@
 
 		let nextPage;
 		switch (page) {
+			case 0:
+				nextPage = 2;
+				break;
 			case 7:
 				nextPage = 9;
 				break;
@@ -73,7 +78,12 @@
 		if (history.length > 0) {
 			const previousPage = history.pop();
 			if (previousPage !== undefined) {
-				page = previousPage;
+				// If moving back from page 2, go to page 1 instead of 0
+				if (page === 2 && previousPage === 0) {
+					page = 1;
+				} else {
+					page = previousPage;
+				}
 			}
 		} else {
 			alert('No previous pages in history.');
@@ -87,6 +97,13 @@
 </script>
 
 <body>
+
+	<!-- Zero [0] -->
+	{#if page_zero.includes(page)}
+		<img src={getImageSrc(page + 1)} alt="P{page + 1}" on:load={handleImageLoad}>
+		<Pzero contentHeight={contentHeight} contentWidth={contentWidth} on:nextPage={handleNextPage} />
+	{/if}
+
 	<!-- Start [1]-->
 	{#if page_Start.includes(page)}
 		<img src={getImageSrc(page)} alt="P{page}" on:load={handleImageLoad}>
