@@ -33,7 +33,7 @@
 		justify-items: center;
 		align-items: center;
 		position: relative;
-		grid-template-columns: 30% 40% 30%;
+		grid-template-columns: 30% 25% 45%;
 	}
 	button {
 		width: 100%;
