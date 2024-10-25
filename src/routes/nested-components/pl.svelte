@@ -22,91 +22,91 @@
 
 	{#if page == 19}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>คิดติดตลกว่าจะคุยกับผียังไงดี?</button>
-			<button on:click={() => handleClick(2, 1)}>นั่งคิดสักพัก และ ตัดสินใจ<br>ไปที่อื่นก่อน</button>
-			<button on:click={() => handleClick(3, 1)}>ผีมีจริงที่ไหน</button>
-			<button on:click={() => handleClick(4, 1)}>อยากจะเล่นกับพวกผีจัง<br>เลย! แกล้งกลับดีไหม?</button>
+			<button on:click={() => handleClick(0.77, 1)}>นั่งคิดสักพัก และ ตัดสินใจ<br>ไปที่อื่นก่อน</button>
+			<button on:click={() => handleClick(1.25, 1)}>คิดติดตลกว่าจะคุยกับผียังไงดี?</button>
+			<button on:click={() => handleClick(0.83, 1)}>อยากจะเล่นกับพวกผีจัง<br>เลย! แกล้งกลับดีไหม?</button>
+			<button on:click={() => handleClick(0.164, 1)}>ผีมีจริงที่ไหน</button>
 		</div>
 	{/if}
 
 	{#if page == 21}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>เอาไปขายซะ</button>
-			<button on:click={() => handleClick(2, 1)}>ต้องแลกกับอะไรหรือเปล่านะ?</button>
-			<button on:click={() => handleClick(3, 1)}>จะปรุงยาวิเศษที่ขึ้นชื่อว่าปรุงยากที่สุด</button>
-			<button on:click={() => handleClick(4, 1)}>ยานี่มีไว้ทำอะไร ไม่อยากรับเลย...</button>
+			<button on:click={() => handleClick(0.467, 1)}>ต้องแลกกับอะไรหรือเปล่านะ?</button>
+			<button on:click={() => handleClick(0.25, 1)}>เอาไปขายซะ</button>
+			<button on:click={() => handleClick(0.77, 1)}>ยานี่มีไว้ทำอะไร ไม่อยากรับเลย...</button>
+			<button on:click={() => handleClick(0.06, 1)}>จะปรุงยาวิเศษที่ขึ้นชื่อว่าปรุงยากที่สุด</button>
 		</div>
 	{/if}
 
 	{#if page == 23}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>ลองเล่นเพราะอยากรู้ว่าจะสนุกไหม ?</button>
-			<button on:click={() => handleClick(2, 1)}>อยากเล่น แต่รถนี้ปลอดภัยไหมเนี่ย ?</button>
-			<button on:click={() => handleClick(3, 1)}>ไม่เล่นเพราะกลัวว่าอาจบาดเจ็บ</button>
-			<button on:click={() => handleClick(4, 1)}>ไม่เล่นเพราะไม่ชอบการแข่งขัน</button>
+			<button on:click={() => handleClick(0.467, 1)}>ลองเล่นเพราะอยากรู้ว่าจะสนุกไหม ?</button>
+			<button on:click={() => handleClick(0.25, 1)}>อยากเล่น แต่รถนี้ปลอดภัยไหมเนี่ย ?</button>
+			<button on:click={() => handleClick(0.164, 1)}>ไม่เล่นเพราะกลัวว่าอาจบาดเจ็บ</button>
+			<button on:click={() => handleClick(0.7, 1)}>ไม่เล่นเพราะไม่ชอบการแข่งขัน</button>
 		</div>
 	{/if}
 
 	{#if page == 25}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>พยายามคิดหาวิธีออก</button>
-			<button on:click={() => handleClick(2, 1)}>ฉันเข้ามาทำอะไรในนี้เนี่ย?</button>
-			<button on:click={() => handleClick(3, 1)}>น่าตื่นเต้น อยากลอง!</button>
-			<button on:click={() => handleClick(4, 1)}>ไปเล่นเครื่องอื่นดีกว่าไหมเนี่ย?</button>
+			<button on:click={() => handleClick(0.164, 1)}>พยายามคิดหาวิธีออก</button>
+			<button on:click={() => handleClick(0.415, 1)}>ฉันเข้ามาทำอะไรในนี้เนี่ย?</button>
+			<button on:click={() => handleClick(0.25, 1)}>น่าตื่นเต้น อยากลอง!</button>
+			<button on:click={() => handleClick(0.06, 1)}>ไปเล่นเครื่องอื่นดีกว่าไหมเนี่ย?</button>
 		</div>
 	{/if}
 
 	{#if page == 27}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>รอคนอื่นอยู่ข้างนอกดีกว่า</button>
-			<button on:click={() => handleClick(2, 1)}>ถ้าเข้าไปต้องเกิดเรื่องไม่ดีแน่ ๆ</button>
-			<button on:click={() => handleClick(3, 1)}>ลองเล่นสักครั้งแล้วกัน</button>
-			<button on:click={() => handleClick(4, 1)}>เป็นการผจญภัยที่ท้าทายมาก!</button>
+			<button on:click={() => handleClick(0.415, 1)}>รอคนอื่นอยู่ข้างนอกดีกว่า</button>
+			<button on:click={() => handleClick(0.06, 1)}>ถ้าเข้าไปต้องเกิดเรื่องไม่ดีแน่ ๆ</button>
+			<button on:click={() => handleClick(0.467, 1)}>ลองเล่นสักครั้งแล้วกัน</button>
+			<button on:click={() => handleClick(0.164, 1)}>เป็นการผจญภัยที่ท้าทายมาก!</button>
 		</div>
 	{/if}
 
 	{#if page == 28}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>ขับพุ่งเข้าไปเล่นทันที</button>
-			<button on:click={() => handleClick(2, 1)}>จอดรถก่อน ดูคนอื่นเล่นก่อนดีกว่า</button>
-			<button on:click={() => handleClick(3, 1)}>เรียกน้องแมวมาเล่นด้วยกัน</button>
-			<button on:click={() => handleClick(4, 1)}>หาวิธีลงจากรถดีกว่า</button>
+			<button on:click={() => handleClick(0.83, 1)}>เรียกน้องแมวมาเล่นด้วยกัน</button>
+			<button on:click={() => handleClick(0.06, 1)}>ขับพุ่งเข้าไปเล่นทันที</button>
+			<button on:click={() => handleClick(0.7, 1)}>จอดรถก่อน ดูคนอื่นเล่นก่อนดีกว่า</button>
+			<button on:click={() => handleClick(0.415, 1)}>หาวิธีลงจากรถดีกว่า</button>
 		</div>
 	{/if}
 
 	{#if page == 29}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>การ์ตูนแอ็กชันที่สนุกสุดเหวี่ยง</button>
-			<button on:click={() => handleClick(2, 1)}>หนังที่เข้าถึงจิตใจคน</button>
-			<button on:click={() => handleClick(3, 1)}>สารคดี</button>
-			<button on:click={() => handleClick(4, 1)}>หนังเสียดสีสังคม</button>
+			<button on:click={() => handleClick(0.55, 1)}>การ์ตูนแอ็กชันที่สนุกสุดเหวี่ยง</button>
+			<button on:click={() => handleClick(0.415, 1)}>หนังที่เข้าถึงจิตใจคน</button>
+			<button on:click={() => handleClick(0.164, 1)}>หนังเสียดสีสังคม</button>
+			<button on:click={() => handleClick(0.7, 1)}>สารคดี</button>
 		</div>
 	{/if}
 
 	{#if page == 30}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>ครอบครัว</button>
-			<button on:click={() => handleClick(2, 1)}>คู่แข่ง</button>
-			<button on:click={() => handleClick(3, 1)}>พี่น้อง</button>
-			<button on:click={() => handleClick(4, 1)}>เพื่อน</button>
+			<button on:click={() => handleClick(0.7, 1)}>ครอบครัว</button>
+			<button on:click={() => handleClick(1.25, 1)}>พี่น้อง</button>
+			<button on:click={() => handleClick(0.06, 1)}>คู่แข่ง</button>
+			<button on:click={() => handleClick(0.55, 1)}>เพื่อน</button>
 		</div>
 	{/if}
 
 	{#if page == 32}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>ไป ๆๆ นั่งด้วยกันเถอะ!</button>
-			<button on:click={() => handleClick(2, 1)}>น่าตื่นเต้นมาก! เราเปิดเพลงเองได้ไหม?</button>
-			<button on:click={() => handleClick(3, 1)}>ก็น่าเล่นนะ ถ้ามีเพลงที่ใช่</button>
-			<button on:click={() => handleClick(4, 1)}>แค่เครื่องเล่นหมุน ๆ ไม่เห็นน่าสนใจเลย</button>
+			<button on:click={() => handleClick(0.83, 1)}>ไป ๆๆ นั่งด้วยกันเถอะ!</button>
+			<button on:click={() => handleClick(0.55, 1)}>ก็น่าเล่นนะ ถ้ามีเพลงที่ใช่</button>
+			<button on:click={() => handleClick(0.77, 1)}>แค่เครื่องเล่นหมุน ๆ ไม่เห็นน่าสนใจเลย</button>
+			<button on:click={() => handleClick(1.25, 1)}>น่าตื่นเต้นมาก! เราเปิดเพลงเองได้ไหม?</button>
 		</div>
 	{/if}
 
 	{#if page == 33}
 		<div class="as">
-			<button on:click={() => handleClick(1, 1)}>ทัศนียภาพที่ไกลสุดลูกหูลูกตา</button>
-			<button on:click={() => handleClick(2, 1)}>เครื่องเล่นนี้ได้มาตรฐานไหม?</button>
-			<button on:click={() => handleClick(3, 1)}>ชิงช้านี้มีอะไรเด่นที่ดึงดูดคนมาเล่น?</button>
-			<button on:click={() => handleClick(4, 1)}>ชิงช้าจะหมุนกลิ้งได้ไหม</button>
+			<button on:click={() => handleClick(1.25, 1)}>ชิงช้าจะหมุนกลิ้งได้ไหม</button>
+			<button on:click={() => handleClick(0.77, 1)}>ทัศนียภาพที่ไกลสุดลูกหูลูกตา</button>
+			<button on:click={() => handleClick(0.25, 1)}>เครื่องเล่นนี้ได้มาตรฐานไหม?</button>
+			<button on:click={() => handleClick(0.55, 1)}>ชิงช้านี้มีอะไรเด่นที่ดึงดูดคนมาเล่น?</button>
 		</div>
 	{/if}
 

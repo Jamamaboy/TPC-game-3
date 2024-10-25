@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import BAS from '../../public/Img/GO/BAS.png';
+	import LART from '../../public/Img/GO/LART.png';
 	import CITU from '../../public/Img/GO/CITU.png';
 	import LLB from '../../public/Img/GO/LLB.png';
 	import BIR from '../../public/Img/GO/BIR.png';
@@ -26,28 +26,30 @@
 
 	function calculateTotalPoints() {
 		totalPoints = point.reduce((acc, curr) => acc + curr, 0);
+		console.log(totalPoints);
 	}
 	function determineGift() {
-		if (totalPoints >= 10 && totalPoints <= 13) {
-			gift = BAS;
-		} else if (totalPoints >= 14 && totalPoints <= 16) {
-			gift = CITU;
-		} else if (totalPoints >= 17 && totalPoints <= 19) {
-			gift = LLB;
-		} else if (totalPoints >= 20 && totalPoints <= 22) {
+		if (totalPoints >= 0.06 && totalPoints <= 0.98) {
 			gift = BIR;
-		} else if (totalPoints >= 23 && totalPoints <= 25) {
-			gift = PBIC;
-		} else if (totalPoints >= 26 && totalPoints <= 28) {
-			gift = SPD;
-		} else if (totalPoints >= 29 && totalPoints <= 31) {
+		} else if (totalPoints > 0.98 && totalPoints <= 1.28) {
 			gift = TBS;
-		} else if (totalPoints >= 32 && totalPoints <= 34) {
-			gift = BJM;
-		} else if (totalPoints >= 35 && totalPoints <= 37) {
+		} else if (totalPoints > 1.28 && totalPoints <= 1.58) {
 			gift = BE;
-		} else if (totalPoints >= 38 && totalPoints <= 40) {
+		} else if (totalPoints > 1.58 && totalPoints <= 1.84) {
 			gift = PPE;
+		} else if (totalPoints > 1.84 && totalPoints <= 2.04) {
+			gift = SPD;
+		} else if (totalPoints > 2.04 && totalPoints <= 2.38) {
+			gift = BJM;
+		} else if (totalPoints > 2.38 && totalPoints <= 2.94) {
+			gift = CITU;
+		} else if (totalPoints > 2.94 && totalPoints <= 3.98) {
+			gift = PBIC;
+		} else if (totalPoints >= 3.98 && totalPoints <= 4.98) {
+			gift = LLB;
+		// [4.99 , 8.882] // 4.99 - 6.00
+		} else if (totalPoints >= 4.98) {
+			gift = LART;
 		}
 	}
 
