@@ -29,26 +29,26 @@
 		console.log(totalPoints);
 	}
 	function determineGift() {
-		if (totalPoints >= 0.06 && totalPoints <= 0.98) {
+		if (totalPoints >= 1.696 && totalPoints <= 2.4501) {
 			gift = BIR;
-		} else if (totalPoints > 0.98 && totalPoints <= 1.28) {
+		} else if (totalPoints > 2.4501 && totalPoints <= 3.2052) {
 			gift = TBS;
-		} else if (totalPoints > 1.28 && totalPoints <= 1.58) {
+		} else if (totalPoints > 3.2052 && totalPoints <= 3.9603) {
 			gift = BE;
-		} else if (totalPoints > 1.58 && totalPoints <= 1.84) {
+		} else if (totalPoints > 3.9603 && totalPoints <= 4.7154) {
 			gift = PPE;
-		} else if (totalPoints > 1.84 && totalPoints <= 2.04) {
+		} else if (totalPoints > 4.7154 && totalPoints <= 5.4705) {
 			gift = SPD;
-		} else if (totalPoints > 2.04 && totalPoints <= 2.38) {
+		} else if (totalPoints > 5.4705 && totalPoints <= 6.2256) {
 			gift = BJM;
-		} else if (totalPoints > 2.38 && totalPoints <= 2.94) {
+		} else if (totalPoints > 6.2256 && totalPoints <= 6.9807) {
 			gift = CITU;
-		} else if (totalPoints > 2.94 && totalPoints <= 3.98) {
+		} else if (totalPoints > 6.9807 && totalPoints <= 7.7358) {
 			gift = PBIC;
-		} else if (totalPoints >= 3.98 && totalPoints <= 4.98) {
+		} else if (totalPoints >= 7.7358 && totalPoints <= 8.4919) {
 			gift = LLB;
 		// [4.99 , 8.882] // 4.99 - 6.00
-		} else if (totalPoints >= 4.98) {
+		} else if (totalPoints >= 8.4919) {
 			gift = LART;
 		}
 	}
