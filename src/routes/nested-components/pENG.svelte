@@ -29,29 +29,53 @@
 		console.log(totalPoints);
 	}
 	function determineGift() {
-		if (totalPoints >= 1.696 && totalPoints <= 2.4501) {
+		// Ver jeng final
+		if (totalPoints >= 1.592 && totalPoints <= 4.023) {
 			gift = BIR;
-		} else if (totalPoints > 2.4501 && totalPoints <= 3.2052) {
+		} else if (totalPoints > 4.023 && totalPoints <= 4.418) {
 			gift = TBS;
-		} else if (totalPoints > 3.2052 && totalPoints <= 3.9603) {
+		} else if (totalPoints > 4.418 && totalPoints <= 4.705) {
 			gift = BE;
-		} else if (totalPoints > 3.9603 && totalPoints <= 4.7154) {
+		} else if (totalPoints > 4.705 && totalPoints <= 4.954) {
 			gift = PPE;
-		} else if (totalPoints > 4.7154 && totalPoints <= 5.4705) {
+		} else if (totalPoints > 4.954 && totalPoints <= 5.186) {
 			gift = SPD;
-		} else if (totalPoints > 5.4705 && totalPoints <= 6.2256) {
+		} else if (totalPoints > 5.186 && totalPoints <= 5.420) {
 			gift = BJM;
-		} else if (totalPoints > 6.2256 && totalPoints <= 6.9807) {
+		} else if (totalPoints > 5.420 && totalPoints <= 5.668) {
 			gift = CITU;
-		} else if (totalPoints > 6.9807 && totalPoints <= 7.7358) {
+		} else if (totalPoints > 5.668 && totalPoints <= 5.958) {
 			gift = PBIC;
-		} else if (totalPoints >= 7.7358 && totalPoints <= 8.4919) {
+		} else if (totalPoints >= 5.958 && totalPoints <= 6.355) {
 			gift = LLB;
 		// [4.99 , 8.882] // 4.99 - 6.00
-		} else if (totalPoints >= 8.4919) {
+		} else if (totalPoints >= 6.355) {
 			gift = LART;
 		}
 	}
+	// 	if (totalPoints >= 1.696 && totalPoints <= 2.4501) {
+	// 		gift = BIR;
+	// 	} else if (totalPoints > 2.4501 && totalPoints <= 3.2052) {
+	// 		gift = TBS;
+	// 	} else if (totalPoints > 3.2052 && totalPoints <= 3.9603) {
+	// 		gift = BE;
+	// 	} else if (totalPoints > 3.9603 && totalPoints <= 4.7154) {
+	// 		gift = PPE;
+	// 	} else if (totalPoints > 4.7154 && totalPoints <= 5.4705) {
+	// 		gift = SPD;
+	// 	} else if (totalPoints > 5.4705 && totalPoints <= 6.2256) {
+	// 		gift = BJM;
+	// 	} else if (totalPoints > 6.2256 && totalPoints <= 6.9807) {
+	// 		gift = CITU;
+	// 	} else if (totalPoints > 6.9807 && totalPoints <= 7.7358) {
+	// 		gift = PBIC;
+	// 	} else if (totalPoints >= 7.7358 && totalPoints <= 8.4919) {
+	// 		gift = LLB;
+	// 	// [4.99 , 8.882] // 4.99 - 6.00
+	// 	} else if (totalPoints >= 8.4919) {
+	// 		gift = LART;
+	// 	}
+	// }
 
 	function reset() {
 		window.location.reload();
