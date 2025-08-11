@@ -85,7 +85,7 @@
 		<img src={gift} alt="{gift}" />
 
 		<div class="controls">
-			<button on:click={reset}>ReStart Game</button>
+			<button on:click={reset}>Restart Game</button>
 			<button on:click={() => downloadImage(gift)}>Download Image</button>
 		</div>
 
