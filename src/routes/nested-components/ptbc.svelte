@@ -41,6 +41,7 @@
 		background: none;
 		border: none;
 		object-fit: contain;
+		-webkit-tap-highlight-color: transparent;
 	}
 	.space {
 		height: 100%;
