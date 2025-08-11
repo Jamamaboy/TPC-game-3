@@ -60,7 +60,13 @@
 	function downloadImage(gift: string) {
 		const link = document.createElement('a');
 		link.href = gift;
-		link.download = `gift.png`;
+		// หาชื่อไฟล์จาก gift ที่ตรงกับ element
+		let fileName = 'gift.png';
+		if (gift === Earth) fileName = 'earth pyrite#TPCFirstMeet2025.png';
+		else if (gift === Fire) fileName = 'fire garnet#TPCFirstMeet2025.png';
+		else if (gift === Water) fileName = 'water moonstone#TPCFirstMeet2025.png';
+		else if (gift === Wind) fileName = 'wind lapis lazuli#TPCFirstMeet2025.png';
+		link.download = fileName;
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
