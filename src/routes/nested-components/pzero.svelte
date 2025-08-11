@@ -1,7 +1,7 @@
 <script>
 	import { createEventDispatcher } from "svelte";
 	import { browser } from '$app/environment'; // Import the 'browser' object
-	import audioFile from '../../public/audio/Ghost Party by The Piano Says.mp3';
+	import audioFile from '../../public/audio/Fairy Lands _ FANTASY MUSIC in a Magical Forest _ Fantasy Ambience (mp3cut.net).mp3';
 
 	export let contentHeight;
 	export let contentWidth;
