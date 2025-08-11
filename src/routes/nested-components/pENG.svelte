@@ -17,7 +17,7 @@
 	$: calculateTotalPoints();
 	$: determineGift();
 
-	const dic: Record<string, number> = { "A": 1, "B": 2, "C": 0, "D": 0 };
+	const dic: Record<string, number> = { "A": 0, "B": 0, "C": 0, "D": 0 };
 
 	function calculateTotalPoints() {
 		totalPoints = point.reduce((acc, curr) => acc + (dic[curr] ?? 0), 0);
@@ -25,30 +25,31 @@
 	}
 
 	function determineGift() {
-
-		// // Ver jeng final
-		// if (totalPoints >= 1.592 && totalPoints <= 4.023) {
-		// 	gift = BIR;
-		// } else if (totalPoints > 4.023 && totalPoints <= 4.418) {
-		// 	gift = TBS;
-		// } else if (totalPoints > 4.418 && totalPoints <= 4.705) {
-		// 	gift = BE;
-		// } else if (totalPoints > 4.705 && totalPoints <= 4.954) {
-		// 	gift = PPE;
-		// } else if (totalPoints > 4.954 && totalPoints <= 5.186) {
-		// 	gift = SPD;
-		// } else if (totalPoints > 5.186 && totalPoints <= 5.420) {
-		// 	gift = BJM;
-		// } else if (totalPoints > 5.420 && totalPoints <= 5.668) {
-		// 	gift = CITU;
-		// } else if (totalPoints > 5.668 && totalPoints <= 5.958) {
-		// 	gift = PBIC;
-		// } else if (totalPoints >= 5.958 && totalPoints <= 6.355) {
-		// 	gift = LLB;
-		// // [4.99 , 8.882] // 4.99 - 6.00
-		// } else if (totalPoints >= 6.355) {
-		// 	gift = LART;
-		// }
+		// นับจำนวนแต่ละตัวเลือก
+		const count: Record<string, number> = { A: 0, B: 0, C: 0, D: 0 };
+		let lastChoice = "A";
+		for (const ans of point) {
+			if (count[ans] !== undefined) count[ans]++;
+			if (["A","B","C","D"].includes(ans)) lastChoice = ans;
+		}
+		// หา key ที่มีค่ามากสุด
+		let max = 0;
+		let maxChoices: string[] = [];
+		for (const k of Object.keys(count)) {
+			if (count[k] > max) {
+				max = count[k];
+				maxChoices = [k];
+			} else if (count[k] === max && max > 0) {
+				maxChoices.push(k);
+			}
+		}
+		// ถ้ามีมากสุดมากกว่า 1 ตัวเลือก ให้ใช้ตัวสุดท้ายที่ตอบ
+		let finalChoice = maxChoices.length === 1 ? maxChoices[0] : lastChoice;
+		if (finalChoice === "A") gift = Earth;
+		else if (finalChoice === "B") gift = Fire;
+		else if (finalChoice === "C") gift = Water;
+		else if (finalChoice === "D") gift = Wind;
+		else gift = "";
 	}
 
 

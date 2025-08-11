@@ -7,13 +7,12 @@
 	const dispatch = createEventDispatcher();
 
 	/**
-     * @param {number | undefined} [additionalPoint]
-     * @param {number} [pageIncrement]
-     */
+	 * @param {string} choice
+	 * @param {number} pageIncrement
+	 */
 	function handleClick(choice, pageIncrement) {
-	   dispatch('nextPage', { additionalChoice: choice, pageIncrement });
-   }
-
+		dispatch('nextPage', { additionalChoice: choice, pageIncrement });
+	}
 </script>
 
 <div class="content" style="height: {contentHeight}px; width: {contentWidth}px;">
