@@ -1,81 +1,56 @@
 <script lang="ts">
 
-	import LART from '../../public/Img/GO/LART.png';
-	import CITU from '../../public/Img/GO/CITU.png';
-	import LLB from '../../public/Img/GO/LLB.png';
-	import BIR from '../../public/Img/GO/BIR.png';
-	import PBIC from '../../public/Img/GO/PBIC.png';
-	import SPD from '../../public/Img/GO/SPD.png';
-	import TBS from '../../public/Img/GO/TBS.png';
-	import BJM from '../../public/Img/GO/BJM.png';
-	import BE from '../../public/Img/GO/BE.png';
-	import PPE from '../../public/Img/GO/PPE.png';
-
+	import Earth from '../../public/Img/GO/earth_pyrite.png';
+	import Fire from '../../public/Img/GO/fire_garnet.png';
+	import Water from '../../public/Img/GO/water_moonstone.png';
+	import Wind from '../../public/Img/GO/wind_lapis.png';
 
 	import { onMount } from "svelte";
 	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
 
-	export let point: number[];
+	export let point: string[];
 	let totalPoints = 0;
 	let gift = "";
 
 	$: calculateTotalPoints();
 	$: determineGift();
 
+	const dic: Record<string, number> = { "A": 1, "B": 2, "C": 0, "D": 0 };
+
 	function calculateTotalPoints() {
-		totalPoints = point.reduce((acc, curr) => acc + curr, 0);
+		totalPoints = point.reduce((acc, curr) => acc + (dic[curr] ?? 0), 0);
 		console.log(totalPoints);
 	}
+
 	function determineGift() {
-		// Ver jeng final
-		if (totalPoints >= 1.592 && totalPoints <= 4.023) {
-			gift = BIR;
-		} else if (totalPoints > 4.023 && totalPoints <= 4.418) {
-			gift = TBS;
-		} else if (totalPoints > 4.418 && totalPoints <= 4.705) {
-			gift = BE;
-		} else if (totalPoints > 4.705 && totalPoints <= 4.954) {
-			gift = PPE;
-		} else if (totalPoints > 4.954 && totalPoints <= 5.186) {
-			gift = SPD;
-		} else if (totalPoints > 5.186 && totalPoints <= 5.420) {
-			gift = BJM;
-		} else if (totalPoints > 5.420 && totalPoints <= 5.668) {
-			gift = CITU;
-		} else if (totalPoints > 5.668 && totalPoints <= 5.958) {
-			gift = PBIC;
-		} else if (totalPoints >= 5.958 && totalPoints <= 6.355) {
-			gift = LLB;
-		// [4.99 , 8.882] // 4.99 - 6.00
-		} else if (totalPoints >= 6.355) {
-			gift = LART;
-		}
+
+		// // Ver jeng final
+		// if (totalPoints >= 1.592 && totalPoints <= 4.023) {
+		// 	gift = BIR;
+		// } else if (totalPoints > 4.023 && totalPoints <= 4.418) {
+		// 	gift = TBS;
+		// } else if (totalPoints > 4.418 && totalPoints <= 4.705) {
+		// 	gift = BE;
+		// } else if (totalPoints > 4.705 && totalPoints <= 4.954) {
+		// 	gift = PPE;
+		// } else if (totalPoints > 4.954 && totalPoints <= 5.186) {
+		// 	gift = SPD;
+		// } else if (totalPoints > 5.186 && totalPoints <= 5.420) {
+		// 	gift = BJM;
+		// } else if (totalPoints > 5.420 && totalPoints <= 5.668) {
+		// 	gift = CITU;
+		// } else if (totalPoints > 5.668 && totalPoints <= 5.958) {
+		// 	gift = PBIC;
+		// } else if (totalPoints >= 5.958 && totalPoints <= 6.355) {
+		// 	gift = LLB;
+		// // [4.99 , 8.882] // 4.99 - 6.00
+		// } else if (totalPoints >= 6.355) {
+		// 	gift = LART;
+		// }
 	}
-	// 	if (totalPoints >= 1.696 && totalPoints <= 2.4501) {
-	// 		gift = BIR;
-	// 	} else if (totalPoints > 2.4501 && totalPoints <= 3.2052) {
-	// 		gift = TBS;
-	// 	} else if (totalPoints > 3.2052 && totalPoints <= 3.9603) {
-	// 		gift = BE;
-	// 	} else if (totalPoints > 3.9603 && totalPoints <= 4.7154) {
-	// 		gift = PPE;
-	// 	} else if (totalPoints > 4.7154 && totalPoints <= 5.4705) {
-	// 		gift = SPD;
-	// 	} else if (totalPoints > 5.4705 && totalPoints <= 6.2256) {
-	// 		gift = BJM;
-	// 	} else if (totalPoints > 6.2256 && totalPoints <= 6.9807) {
-	// 		gift = CITU;
-	// 	} else if (totalPoints > 6.9807 && totalPoints <= 7.7358) {
-	// 		gift = PBIC;
-	// 	} else if (totalPoints >= 7.7358 && totalPoints <= 8.4919) {
-	// 		gift = LLB;
-	// 	// [4.99 , 8.882] // 4.99 - 6.00
-	// 	} else if (totalPoints >= 8.4919) {
-	// 		gift = LART;
-	// 	}
-	// }
+
 
 	function reset() {
 		window.location.reload();

@@ -10,9 +10,9 @@
      * @param {number | undefined} [additionalPoint]
      * @param {number} [pageIncrement]
      */
-	 function handleClick(additionalPoint, pageIncrement) {
-		dispatch('nextPage', { additionalPoint, pageIncrement });
-	}
+	function handleClick(choice, pageIncrement) {
+	   dispatch('nextPage', { additionalChoice: choice, pageIncrement });
+   }
 
 </script>
 
@@ -20,7 +20,7 @@
 
 	<div class="space"></div>
 
-	{#if page == 6}
+	<!-- {#if page == 6}
 		<div class="as">
 			<button on:click={() => handleClick(0, 1)}>ไม่มีอะไรหรอก คงเป็นแค่เสียงลมที่กระทบกับหน้าต่าง</button>
 			<button on:click={() => handleClick(0, 1)}>ใจเริ่มสั่น ตัวคุณเองก็กลัว และเริ่มจินตนาการไปต่าง ๆ นานา</button>
@@ -34,6 +34,55 @@
 			<button on:click={() => handleClick(0, 1)}>คุณตื่นเต้น พร้อมลุกจากรถไปอุ้มเจ้าเหมียวเดินทางไปด้วยกัน</button>
 			<button on:click={() => handleClick(0, 2)}>คุณชะโงกหน้าออกไปดูลาดเลา เจ้าแมว เพื่อที่จะได้พิจารณามัน</button>
 			<button on:click={() => handleClick(0, 2)}>คุณคิดว่ามันแปลกเกินไปที่แมวจะอยู่ที่นี่ และคงไม่ดีนักที่จะไปยุ่งกับมัน</button>
+		</div>
+	{/if} -->
+	<!-- const page_n = [9,12,18,21,25,28]; -->
+	{#if page == 9}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 1)}></button>
+			<button on:click={() => handleClick("D", 1)}></button>
+		</div>
+	{/if}
+	{#if page == 12}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 1)}></button>
+			<button on:click={() => handleClick("D", 1)}></button>
+		</div>
+	{/if}
+	{#if page == 18}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 1)}></button>
+			<button on:click={() => handleClick("D", 1)}></button>
+		</div>
+	{/if}
+	{#if page == 21}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 2)}></button>
+			<button on:click={() => handleClick("D", 2)}></button>
+		</div>
+	{/if}
+	{#if page == 25}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 1)}></button>
+			<button on:click={() => handleClick("D", 1)}></button>
+		</div>
+	{/if}
+	{#if page == 28}
+		<div class="as">
+			<button on:click={() => handleClick("A", 1)}></button>
+			<button on:click={() => handleClick("B", 1)}></button>
+			<button on:click={() => handleClick("C", 1)}></button>
+			<button on:click={() => handleClick("D", 1)}></button>
 		</div>
 	{/if}
 
@@ -53,17 +102,16 @@
 		z-index: 1;
 		justify-items: center;
 		align-items: center;
-		grid-template-rows: 45% 45% 10%;
+		grid-template-rows: 50% 34% 16%;
 		width: 100%;
 	}
 	.as {
 		height: 100%;
-		width: 60%;
+		width: 84%;
 		display: grid;
 		align-items: center;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
 		gap: 5%;
-		/* background-color: aqua;	 */
 	}
 	.as button {
 		font-family: 'CloudLoop';
@@ -71,12 +119,14 @@
 		color: darkslategrey;
 		height: 100%;
 		width: 100%;
-		border-radius: 20px;
-		border: 1px;
-		background-color: #ffffff;
+		border-radius: 200px;
+		border: none;
+		background-color: transparent;
+		/* background-color: aliceblue; */
 	}
 	.space {
 		height: 100%;
+
 	}
 
 </style>
