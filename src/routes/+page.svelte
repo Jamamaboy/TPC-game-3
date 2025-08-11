@@ -1,5 +1,16 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	// Preload all images in layer0 and layer1 for faster navigation
+	onMount(() => {
+		const totalPages = 34; // Adjust if you have more/less images
+		for (let i = 0; i <= totalPages; i++) {
+			const img0 = new window.Image();
+			img0.src = `/Img/layer0/${i}.webp`;
+			const img1 = new window.Image();
+			img1.src = `/Img/layer1/${i}.webp`;
+		}
+	});
 	import Pzero from './nested-components/pzero.svelte';
 	import PStart from './nested-components/pStart.svelte';
 	import Ptbc from './nested-components/ptbc.svelte';
