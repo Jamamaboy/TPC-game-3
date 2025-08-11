@@ -51,20 +51,28 @@
 	}
 	button {
 		font-family: 'CloudLoop';
-		border: 5em;
 		cursor: pointer;
 		outline: none;
-		font-size: 14px;
-		-webkit-transform: translate(0);
-		transform: translate(0);
-		background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-		padding: 0.3em 1em;
-		box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
-		-webkit-transition: box-shadow 0.25s;
-		transition: box-shadow 0.25s;
+		font-size: 18px;
+		padding: 10px 20px;
 		color: white;
-		border-radius: 20px;
+		background: linear-gradient(135deg, #f9c1ff, #a1c4fd); /* ไล่สีพาสเทล */
+		border: none;
+		border-radius: 30px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
 	}
+
+	button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+	}
+
+	button:active {
+		transform: translateY(0);
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	}
+
 	.space {
 		height: 100%;
 	}

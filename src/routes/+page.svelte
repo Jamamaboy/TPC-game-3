@@ -37,7 +37,7 @@
 	const page_zero = [0];
 	const page_Start = [1];
 	const page_tbc = [2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 14, 15, 16, 17, 19, 20, 22, 23, 24, 26, 27, 29, 30, 31, 32, 33];
-	const page_cc = [3, 6];
+	// const page_cc = [3, 6];
 	const page_n = [9,12,18,21,25,28];
 	const page_nextP = [34];
 	const page_ENG = [35];

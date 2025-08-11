@@ -5,12 +5,15 @@
 	import Water from '../../public/Img/GO/water_moonstone.png';
 	import Wind from '../../public/Img/GO/wind_lapis.png';
 
+
 	import { onMount } from "svelte";
 	import { createEventDispatcher } from "svelte";
 
 	const dispatch = createEventDispatcher();
 
 	export let point: string[];
+	export let contentHeight: number;
+	export let contentWidth: number;
 	let totalPoints = 0;
 	let gift = "";
 
@@ -76,16 +79,17 @@
 	});
 
 </script>
+<div class="content" style="height: {contentHeight}px; width: {contentWidth}px;">
+	<div class="container">
 
-<div class="container">
+		<img src={gift} alt="{gift}" />
 
-	<img src={gift} alt="{gift}" />
+		<div class="controls">
+			<button on:click={reset}>ReStart Game</button>
+			<button on:click={() => downloadImage(gift)}>Download Image</button>
+		</div>
 
-	<div class="controls">
-		<button on:click={reset}>ReStart Game</button>
-		<button on:click={() => downloadImage(gift)}>Download Image</button>
 	</div>
-
 </div>
 
 <style>
@@ -98,43 +102,58 @@
 		font-display: swap;
 	}
 	.container {
-		display: grid;
-		grid-template-rows: 90% 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		justify-items: center;
 		height: 100%;
-		width: auto;
-		object-fit: contain;
+		padding: 10px;
 	}
 
 	img {
-		max-width: 100%;
+		width: 100%;
+		max-width: 500px; /* กำหนดขนาดสูงสุดสำหรับจอใหญ่ */
 		height: auto;
+		object-fit: contain;
+		flex: 1;
 	}
 
 	.controls {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: center;
+		display: flex;
+		gap: 20px;
 		justify-content: center;
-		width: 100%;
-		height: 100%;
-		padding-top: 5%;
+		align-items: center;
+		margin-top: 10px;
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 768px) {
+		img {
+			max-width: 100%;
+			max-height: 70vh; /* บนมือถือ ให้ภาพสูงสุดไม่เกิน 70% ของหน้าจอ */
+		}
 	}
 
 	button {
 		font-family: 'CloudLoop';
-		font-size: 16px;
-		min-width: 60%;
-		padding: 5px;
-		padding-left: 10%;
-		padding-right: 10%;
-		color: black;
-		border: 1px solid black;
-		border-radius: 20px;
-		background-color: white;
-		transition: background-color 0.3s;
-		align-self: center;
-		justify-self: center;
+		font-size: 18px;
+		padding: 10px 20px;
+		color: white;
+		background: linear-gradient(135deg, #f9c1ff, #a1c4fd); /* ไล่สีหวาน ๆ */
+		border: none;
+		border-radius: 30px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+	}
+
+	button:active {
+		transform: translateY(0);
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 	}
 </style>
