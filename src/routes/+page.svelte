@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { inject } from '@vercel/analytics';
+
 	// Preload all images in layer0 and layer1 for faster navigation
 	onMount(() => {
 		const totalPages = 34; // Adjust if you have more/less images
